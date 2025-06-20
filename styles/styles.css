@@ -1,0 +1,283 @@
+:root {
+  --verde-principal: #1b4332;
+  --verde-claro: #95d5b2;
+  --fondo-suave: #fefae0;
+  --texto-oscuro: #081c15;
+  --fuente-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--fondo-suave);
+  font-family: var(--fuente-base);
+  color: var(--texto-oscuro);
+  line-height: 1.6;
+}
+
+/* -------- HEADER -------- */
+header {
+  background: var(--verde-principal);
+  color: white;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h3 {
+  font-size: 1.8rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+  background: var(--verde-claro);
+  color: black;
+  transform: scale(1.05);
+}
+
+/* -------- PORTADA PRINCIPAL -------- */
+main > section:first-of-type {
+  background: url('../public/portada-nueva.jpg') no-repeat center/cover;
+  color: white;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+main > section:first-of-type::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+main > section:first-of-type::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  transform: scale(1);
+  transition: transform 1s ease;
+  z-index: 0;
+}
+
+main > section:first-of-type:hover::after {
+  transform: scale(1.05);
+}
+
+main > section:first-of-type * {
+  position: relative;
+  z-index: 2;
+}
+
+main > section:first-of-type h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+main > section:first-of-type h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+main > section:first-of-type a {
+  background: var(--verde-claro);
+  color: #000;
+  text-decoration: none;
+  padding: 0.7rem 1.5rem;
+  margin: 0.5rem;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+main > section:first-of-type a:hover {
+  background-color: #fff;
+  transform: scale(1.08);
+}
+
+/* -------- SECCIONES GENERALES -------- */
+section {
+  padding: 2rem;
+}
+
+section h1,
+section h2,
+section h3 {
+  color: var(--verde-principal);
+  margin-bottom: 1rem;
+}
+
+section img {
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+section img:hover {
+  transform: scale(1.05);
+}
+
+/* -------- CONOCENOS -------- */
+.Conocenos {
+  background-color: #d8f3dc;
+  border-left: 5px solid var(--verde-principal);
+  border-radius: 10px;
+}
+
+.Conocenos div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+/* -------- UBICACIÓN -------- */
+.Ubicacion iframe {
+  width: 100%;
+  max-width: 600px;
+  border: 2px solid var(--verde-principal);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* -------- CABAÑAS -------- */
+.cabanas {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+article {
+  background-color: white;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cardHeader {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.CardFooter {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
+.CardFooter a {
+  text-decoration: none;
+  background-color: var(--verde-principal);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.CardFooter a:hover {
+  background-color: var(--verde-claro);
+  color: black;
+  transform: translateY(-2px);
+}
+
+/* -------- FORMULARIO DE CONSULTAS -------- */
+.consultas {
+  background: #fff;
+  border: 2px dashed var(--verde-principal);
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+form div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+form input,
+form textarea {
+  padding: 0.5rem;
+  border: 1px solid var(--verde-principal);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+form button {
+  background-color: var(--verde-principal);
+  color: white;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+form button:hover {
+  background-color: var(--verde-claro);
+  color: black;
+  transform: scale(1.05);
+}
+
+/* -------- FOOTER -------- */
+footer {
+  background-color: var(--verde-principal);
+  color: white;
+  padding: 2rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+footer div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}

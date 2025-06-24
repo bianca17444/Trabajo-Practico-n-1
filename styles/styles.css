@@ -1,3 +1,4 @@
+
 :root {
   --verde-principal: #1b4332;
   --verde-claro: #95d5b2;
@@ -211,7 +212,7 @@ article {
   transition: background-color 0.3s, transform 0.3s;
 }
 
-.CardFooter a:hover {
+CardFooter a:hover {
   background-color: var(--verde-claro);
   color: black;
   transform: translateY(-2px);

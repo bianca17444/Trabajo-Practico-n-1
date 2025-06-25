@@ -1,6 +1,5 @@
-
 :root {
-  --verde-principal: #1b4332;
+  --verde-principal: #61a98b;
   --verde-claro: #95d5b2;
   --fondo-suave: #fefae0;
   --texto-oscuro: #081c15;
@@ -56,8 +55,8 @@ nav a:hover {
 }
 
 /* -------- PORTADA PRINCIPAL -------- */
-main > section:first-of-type {
-  background: url('../public/portada-nueva.jpg') no-repeat center/cover;
+.portada {
+  background: url('/public/portada.jpg') no-repeat center/cover;
   color: white;
   height: 70vh;
   display: flex;
@@ -68,7 +67,7 @@ main > section:first-of-type {
   position: relative;
 }
 
-main > section:first-of-type::before {
+.portada::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -76,7 +75,7 @@ main > section:first-of-type::before {
   z-index: 1;
 }
 
-main > section:first-of-type::after {
+.portada::after {
   content: '';
   position: absolute;
   inset: 0;
@@ -86,27 +85,27 @@ main > section:first-of-type::after {
   z-index: 0;
 }
 
-main > section:first-of-type:hover::after {
+.portada:hover::after {
   transform: scale(1.05);
 }
 
-main > section:first-of-type * {
+.portada-texto {
   position: relative;
   z-index: 2;
 }
 
-main > section:first-of-type h1 {
+.portada-texto h1 {
   font-size: 3rem;
   margin-bottom: 0.5rem;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
-main > section:first-of-type h3 {
+.portada-texto h3 {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
-main > section:first-of-type a {
+.botones-portada a {
   background: var(--verde-claro);
   color: #000;
   text-decoration: none;
@@ -117,7 +116,7 @@ main > section:first-of-type a {
   transition: transform 0.3s, background-color 0.3s;
 }
 
-main > section:first-of-type a:hover {
+.botones-portada a:hover {
   background-color: #fff;
   transform: scale(1.08);
 }
@@ -212,59 +211,88 @@ article {
   transition: background-color 0.3s, transform 0.3s;
 }
 
-CardFooter a:hover {
+.CardFooter a:hover {
   background-color: var(--verde-claro);
   color: black;
   transform: translateY(-2px);
 }
 
 /* -------- FORMULARIO DE CONSULTAS -------- */
-.consultas {
-  background: #fff;
-  border: 2px dashed var(--verde-principal);
-  border-radius: 10px;
+.consultas-nueva {
+  background: linear-gradient(135deg, #eeeeee 50%, #1a6149);
+  border-radius: 40px;
   padding: 2rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  color: #222;
+  max-width: 90%;
+  margin: auto;
 }
 
-form {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin-top: 1rem;
+.consultas-nueva h2 {
+  color: #1a6149;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
 }
 
-form div {
-  flex: 1;
+.consultas-nueva form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.campo {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
 }
 
-form input,
-form textarea {
-  padding: 0.5rem;
-  border: 1px solid var(--verde-principal);
-  border-radius: 6px;
-  font-size: 1rem;
+.campo label {
+  font-weight: bold;
+  margin-bottom: 0.4rem;
 }
 
-form button {
-  background-color: var(--verde-principal);
-  color: white;
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  border: none;
+.campo input,
+.campo textarea {
+  padding: 0.8rem;
   border-radius: 8px;
+  border: 1px solid #555;
+  font-size: 1rem;
+  outline: none;
+  background-color: white;
+}
+
+.campo-textarea {
+  grid-column: span 2;
+}
+
+.campo textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.boton-consultar {
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+}
+
+.boton-consultar button {
+  background-color: #263f36;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
+  transition: background-color 0.3s ease, transform 0.2s;
 }
 
-form button:hover {
-  background-color: var(--verde-claro);
-  color: black;
+.boton-consultar button:hover {
+  background-color: #3b5b4e;
   transform: scale(1.05);
 }
+
 
 /* -------- FOOTER -------- */
 footer {

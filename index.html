@@ -19,13 +19,17 @@
     </header>
 
     <main>
-      <section>
-        <h1>Cabañas SQL</h1>
-        <h3>Descubri el poder de las relaciones</h3>
-        <a href="#Conocenos"><h3>Conocenos</h3></a>
-        <a href="#cabanas"><h3>Cabañas</h3></a>
-        <img src="./public/portada.jpg" alt="Imagen San Martín de los Andes" width="500" height="200" />
-      </section>
+      <section class="portada">
+        <div class="portada-texto">
+          <h1>Cabañas SQL</h1>
+          <h3>Descubrí el poder de las relaciones</h3>
+          <div class="botones-portada">
+        <a href="#Conocenos">Conocenos</a>
+        <a href="#cabanas">Cabañas</a>
+       </div>
+     </div>
+    </section>
+
 
       <section id="Conocenos" class="Conocenos">
         <div>
@@ -173,40 +177,46 @@
         </article>
       </section>
 
-      <section id="consultas" class="consultas">
-        <h2>Consultá disponibilidad</h2>
+      <section id="consultas" class="consultas-nueva">
+        <h2>Consulta sobre disponibilidad</h2>
         <form>
-          <div>
-            <label>Ingreso</label>
-            <input type="text" placeholder="DD-MM-AA" />
-
-            <label>Salida</label>
-            <input type="text" placeholder="DD-MM-AA" />
-
-            <label>Adultos</label>
-            <input type="number" value="2" />
-
-            <label>Niños</label>
-            <input type="number" value="1" />
-          </div>
-
-          <div>
-            <label>Nombre y apellido</label>
-            <input type="text" placeholder="Tu nombre completo" />
-
-            <label>Teléfono</label>
-            <input type="text" placeholder="Número de contacto" />
-
-            <label>Correo electrónico</label>
-            <input type="text" placeholder="Tu email" />
-          </div>
-
-          <label>Consulta</label>
-          <textarea placeholder="Escribí tu consulta" rows="4" cols="50"></textarea>
-
-          <button type="submit">Enviar</button>
-        </form>
-      </section>
+         <div class="campo">
+           <label>Fecha de ingreso</label>
+         <input type="text" placeholder="DD-MM-AA" />
+        </div>
+      <div class="campo">
+      <label>Fecha de salida</label>
+      <input type="text" placeholder="DD-MM-AA" />
+    </div>
+    <div class="campo">
+      <label>Adultos</label>
+      <input type="number" value="2" />
+    </div>
+    <div class="campo">
+      <label>Menores</label>
+      <input type="number" value="1" />
+    </div>
+    <div class="campo">
+      <label>Nombre completo</label>
+      <input type="text" placeholder="Ingrese su nombre" />
+    </div>
+    <div class="campo">
+      <label>Teléfono</label>
+      <input type="text" placeholder="Ingrese su teléfono" />
+    </div>
+    <div class="campo">
+      <label>Email</label>
+      <input type="email" placeholder="Ingrese su email" />
+    </div>
+    <div class="campo campo-textarea">
+      <label>Mensaje</label>
+      <textarea placeholder="Ingrese su consulta"></textarea>
+    </div>
+    <div class="campo boton-consultar">
+      <button type="submit">Consultar</button>
+    </div>
+  </form>
+</section>
 
       <footer>
         <img src="./public/sql.png" alt="Logo SQL" width="100" height="100" />

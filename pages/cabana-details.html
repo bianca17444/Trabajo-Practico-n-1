@@ -2,62 +2,63 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Detalles de la Cabaña</title>
-  <link rel="stylesheet" href="/styles/pagina.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Detalle de Cabaña | Cabañas SQL</title>
+  <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
   <header>
-    <h3><a href="../index.html">← Volver a Cabañas SQL</a></h3>
+    <h3>Cabañas SQL</h3>
+    <nav>
+      <a href="../index.html#Conocenos"><h3>El complejo</h3></a>
+      <a href="../index.html#Ubicacion"><h3>Ubicación</h3></a>
+      <a href="../index.html#cabanas"><h3>Las Cabañas</h3></a>
+      <a href="../index.html#consultas"><h3>Consultas</h3></a>
+    </nav>
   </header>
 
-  <main>
-    <section class="detalle-cabana">
-      <h1>Detalles de la Cabaña</h1>
-      <p>Conocé todo lo que ofrece nuestra cabaña para disfrutar al máximo tu estadía.</p>
+  <main class="detalle-cabana">
+    <section class="detalle-header">
+      <h1>Cabaña para 2 a 3 personas</h1>
+      <p>Una experiencia acogedora en medio de la naturaleza</p>
+    </section>
 
-      <div class="galeria">
-        <img src="../public/vista.png" alt="Vista escaleras" width="300" height="200" />
-        <img src="../public/vista2.png" alt="Vista inferior" width="300" height="200" />
-        <img src="../public/dormitorio.png" alt="Dormitorio" width="300" height="200" />
-        <img src="../public/baño.png" alt="Baño completo" width="300" height="200" />
-        <img src="../public/dormitorio2.png" alt="Dormitorio adicional" width="300" height="200" />
-      </div>
+    <section class="detalle-galeria">
+      <img src="../public/vista.png" alt="Vista escaleras" width="300" height="220" />
+      <img src="../public/vista2.png" alt="Vista inferior" width="300" height="220" />
+      <img src="../public/dormitorio.png" alt="Dormitorio principal" width="300" height="220" />
+      <img src="../public/baño.png" alt="Baño completo" width="300" height="220" />
+      <img src="../public/dormitorio2.png" alt="Dormitorio adicional" width="300" height="220" />
+    </section>
 
-      <div class="descripcion">
-        <h2>Características principales</h2>
-        <ul>
-          <li><strong>Capacidad:</strong> 2 a 3 personas</li>
-          <li><strong>Superficie:</strong> 20 m²</li>
-          <li><strong>Internet:</strong> Alta velocidad</li>
-          <li><strong>Ambiente:</strong> Climatización</li>
-          <li><strong>Cocina:</strong> Totalmente equipada</li>
-          <li><strong>Otros:</strong> Caja fuerte, secador de pelo</li>
-        </ul>
+    <section class="detalle-info">
+      <h2>Comodidades</h2>
+      <ul>
+        <li><img src="../public/simbolo.png" width="20" /> Superficie: 20 m²</li>
+        <li><img src="../public/simbolo2.png" width="20" /> Internet de alta velocidad</li>
+        <li><img src="../public/simbolo3.png" width="20" /> Cocina equipada con horno, microondas y vajilla</li>
+        <li><img src="../public/simbolo4.png" width="20" /> Caja fuerte</li>
+        <li><img src="../public/simbolo5.png" width="20" /> Secador de pelo</li>
+        <li>Ambiente climatizado frío/calor</li>
+        <li>Baño privado con ducha</li>
+        <li>Ropa de cama y toallas incluidas</li>
+      </ul>
+    </section>
 
-        <h2>Galería adicional</h2>
-        <div class="galeria-extra">
-          <img src="../public/auto.png" alt="Exterior" width="300" height="200" />
-          <img src="../public/comedor.png" alt="Interior comedor" width="300" height="200" />
-          <img src="../public/entrada.png" alt="Entrada principal" width="300" height="200" />
-          <img src="../public/juego.png" alt="Zona de juegos" width="300" height="200" />
-          <img src="../public/patio.png" alt="Vista patio" width="300" height="200" />
-          <img src="../public/perfil.png" alt="Exterior cabaña" width="300" height="200" />
-        </div>
-
-        <a href="../index.html#consultas">
-          <button>Consultar disponibilidad</button>
-        </a>
-      </div>
+    <section class="detalle-footer">
+      <a href="../index.html#consultas" class="boton">Consultar disponibilidad</a>
+      <a href="../index.html#cabanas" class="boton secundario">Volver a las cabañas</a>
     </section>
   </main>
 
   <footer>
-    <img src="../public/sql.png" alt="Logo SQL" width="80" height="80" />
+    <img src="../public/sql.png" alt="Logo SQL" width="100" height="100" />
     <p><strong>CABAÑAS SQL</strong></p>
-    <div><img src="https://img.icons8.com/ios-filled/30/000000/new-post.png" alt="Correo" /> Cabañas@sma.com.ar</div>
-    <div><img src="https://img.icons8.com/ios-filled/30/000000/phone.png" alt="Teléfono" /> 2944 -202020</div>
-    <div><img src="https://img.icons8.com/ios-filled/30/000000/whatsapp.png" alt="WhatsApp" /> 2944 -202020</div>
+    <h2>Información de contacto</h2>
+    <div><img src="https://img.icons8.com/ios-filled/30/000000/new-post.png" /> Cabañas@sma.com.ar</div>
+    <div><img src="https://img.icons8.com/ios-filled/30/000000/phone.png" /> 2944 -202020</div>
+    <div><img src="https://img.icons8.com/ios-filled/30/000000/whatsapp.png" /> 2944 -202020</div>
+    <div><img src="https://img.icons8.com/ios-filled/30/000000/marker.png" /> Coronel Díaz 1156</div>
   </footer>
 </body>
 </html>
